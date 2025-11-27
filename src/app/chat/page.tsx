@@ -65,9 +65,9 @@ export default function ChatPage() {
 
   return (
     <main className="min-h-screen bg-zinc-950 text-zinc-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-5xl grid grid-cols-[260px,1fr] gap-4">
-        {/* Columna izquierda: Sidebar */}
-        <section className="h-[520px]">
+      <div className="w-full max-w-5xl flex gap-4">
+        {/* Sidebar */}
+        <section className="w-72 shrink-0 h-[520px]">
           <SidebarConversations
             conversations={conversations}
             activeId={activeId}
@@ -79,7 +79,7 @@ export default function ChatPage() {
           />
         </section>
 
-        {/* Columna derecha: encabezado + ChatWindow */}
+        {/* ChatWindow */}
         <section className="flex flex-col gap-4">
           <header>
             <h1 className="text-2xl font-semibold">Chat básico con IA</h1>
